@@ -4,14 +4,25 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.postwp.R;
+import com.example.postwp.adapter.PostsAdapter;
+import com.example.postwp.model.Post;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerPosts;
+    private List<Post> listaPosts = new ArrayList<>();
+    private PostsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +39,25 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        //inicializar componentes
+        inicializarComponentes();
+    }
+
+    private void inicializarComponentes() {
+        recyclerPosts = findViewById(R.id.recyclerPosts);
+
+        adapter = new PostsAdapter( listaPosts, getApplicationContext()/*, usuario*/ );
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerPosts.setLayoutManager( layoutManager );
+        recyclerPosts.setHasFixedSize(true);
+        recyclerPosts.setAdapter( adapter );
+
+        listPosts();
+    }
+
+    private void listPosts() {
+
     }
 
     @Override
