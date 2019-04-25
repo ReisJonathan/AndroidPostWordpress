@@ -289,10 +289,10 @@ public class Post {
         this.status = status;
     }
 
-    @Override
+    /*@Override
     public String toString()
     {
-        return "ClassPost [date = "+date+", template = "+template+", modified_gmt = "+modified_gmt+", _links = "+_links+", author = "+author+", link = "+link+", format = "+format+", type = "+type+", title = "+title+", comment_status = "+comment_status+", content = "+content+", featured_media = "+featured_media+", tags = "+tags+", ping_status = "+ping_status+", meta = "+meta+", sticky = "+sticky+", guid = "+guid+", modified = "+modified+", id = "+id+", categories = "+categories+", excerpt = "+excerpt+", date_gmt = "+date_gmt+", slug = "+slug+", status = "+status+"]";
-    }
+        return "[date = "+date+", template = "+template+", modified_gmt = "+modified_gmt+", _links = "+_links+", author = "+author+", link = "+link+", format = "+format+", type = "+type+", title = "+title+", comment_status = "+comment_status+", content = "+content+", featured_media = "+featured_media+", tags = "+tags+", ping_status = "+ping_status+", meta = "+meta+", sticky = "+sticky+", guid = "+guid+", modified = "+modified+", id = "+id+", categories = "+categories+", excerpt = "+excerpt+", date_gmt = "+date_gmt+", slug = "+slug+", status = "+status+"]";
+    }*/
 
 }
