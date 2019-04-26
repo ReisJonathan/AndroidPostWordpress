@@ -23,7 +23,7 @@ public class Post {
 
     private Content content;
 
-    private String featured_media;
+    private int featured_media;
 
     private String[] tags;
 
@@ -159,12 +159,12 @@ public class Post {
         this.content = content;
     }
 
-    public String getFeatured_media ()
+    public int getFeatured_media ()
     {
         return featured_media;
     }
 
-    public void setFeatured_media (String featured_media)
+    public void setFeatured_media (int featured_media)
     {
         this.featured_media = featured_media;
     }
